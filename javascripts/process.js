@@ -108,7 +108,9 @@ function formatNewItem(data){
     var row = "<tr class='ctrl-tbl'><td>"+data.cat+"</td>";
     row += "<td>"+data.assetdesc+"</td>";
     row += "<td>"+data.specs+"</td>";
-    row += "<td>"+data.qty+ctrl+"</td>";
+    row += "<td>"+data.qty+"</td>";
+    row += "<td>"+data.acqcost+"</td>";
+    row += "<td>"+ctrl+"</td>";
     row += "</tr>";
 
     return row;
@@ -162,7 +164,7 @@ function addItems(){
             }).then(function(data){
                 a++;
                 if(a == newItems.length){
-                    window.location.href = "http://localhost/tams/index.php?chez=reports/HardwareAssets.php&VIEWHardwareSummary";
+                    window.location.href = "http://localhost/tams/index.php?chez=reports/invoice.php&invoice";
                 }
             }).catch(function(error){
                 alert(error);

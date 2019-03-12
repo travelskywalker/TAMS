@@ -7,7 +7,7 @@ session_start();
 $dbHost = 'localhost';
 $dbUser = 'root';
 $dbPass = '';
-$dbName = 'tamss';
+$dbName = 'tams';
 
 //database connection
 require_once 'database.php';

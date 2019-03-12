@@ -27,10 +27,11 @@ body { margin-top:20px; }
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Transaction</a>
 	  <div class="dropdown-menu bg">
 	  <a class="dropdown-item" href="index.php?chez=add_item.php&tamsADDhardware">Add Item</a>
-	  <a class="dropdown-item" href="index.php?chez=add_sw.php&tamsADDsoftware">Add Software</a>
+	  <!-- <a class="dropdown-item" href="index.php?chez=add_sw.php&tamsADDsoftware">Add Software</a> -->
 	  <a class="dropdown-item" href="index.php?chez=userassign.php&tamsAssetAssignment">Asset Assignment</a>
 	  <a class="dropdown-item" href="index.php?chez=reports/AssetStatus.php&tamsAssetupdate">Update Asset Status</a>
 	  <a class="dropdown-item" href="index.php?chez=reports/assetsummary.php&tamsSummary">List of Registered Assets</a>
+		<a class="dropdown-item" href="index.php?chez=reports/invoice.php&invoice">List of Invoice</a>
     </li>
 	<li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Report Printing</a>
