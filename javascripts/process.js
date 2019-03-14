@@ -147,13 +147,14 @@ function addItems(){
          //  control number and invoice number
         var cnum = $('#ctrlnum').val();
         var inum = $('#invnum').val();
+        var adate = $('#acqdate').val();
         var a = 0;
          // no invoice number on appending in FormData
 
         for(var x=0; x<= newItems.length-1 ; x++){
             var fdata= newItems[x];//.append("ctrlnum", cnum);
             
-            fdata = fdata+"&ctrlnum="+cnum+"&invnum="+inum;
+            fdata = fdata+"&ctrlnum="+cnum+"&invnum="+inum+"&acqdate="+adate;
             console.log(fdata);
             $.ajax({
                 type: "POST",

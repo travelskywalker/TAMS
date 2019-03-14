@@ -77,16 +77,25 @@ $datanum = $rownum;
 
 $itemImage = ($img != '' ? 'prodimg/'.$img : 'prodimg/noimg.jpeg');
 
+//posting item details
+
 $sql = "INSERT INTO tbl_hwinfo (ctrlnum,assetdesc, type, assetcat, depr, acqdate, acqcost, status, specs, prodimg, invnum, qty)
  		VALUES ('$ctrlnum','$assetdesc', '$type', '$cat','$depr', '$acqdate', '$acqcost', 'FOR ASSIGNING', '$specs', '$itemImage','$invnum', '$qty')";
 		
-		$result = dbQuery($sql) or die('Cannot add asset' . mysql_error());
+		$result = dbQuery($sql) or die('Cannot add item' . mysql_error());
 		// move_uploaded_file($temp,$local_image.$prodimg);
 		
 		// move file from temp to prodimg folder
 		rename('../temp_img/'.$img, '../prodimg/'.$img);
-		
-header('Location:../index.php?chez=add_hw.php');
+	
+//posting invoice details
+
+$sql_invoice = "INSERT INTO tbl_invoice (invnum,acqdate)
+ 		VALUES ('$invnum','$invdate')";
+
+$result_invoice = dbQuery($sql_invoice) or die('Cannot add invoice' . mysql_error());
+
+header('Location:../index.php?chez=reports/invoice.php');
 
 
 // if($prodimg == NULL){
